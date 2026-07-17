@@ -697,4 +697,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardTilt();
   initParticles();
   initPasswordDemo();
+  initPhotoProtection();
 });
+
+// =========================================
+// PROTEÇÃO BÁSICA DA FOTO DE PERFIL
+// (camada extra contra clique direito/arrastar; não é 100% à prova de print)
+// =========================================
+function initPhotoProtection() {
+  const photo = $('.about-photo img');
+  if (!photo) return;
+
+  photo.addEventListener('contextmenu', (event) => event.preventDefault());
+  photo.addEventListener('dragstart', (event) => event.preventDefault());
+}
