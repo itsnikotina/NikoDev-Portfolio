@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niko | Desenvolvedor Python & Segurança</title>
+  <meta name="description" content="Niko - Desenvolvedor autodidata focado em automação e segurança com Python para pequenos negócios.">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="canonical" href="https://itsnikotina.github.io/NikoDev-Portfolio/">
+
+  <!-- Open Graph / compartilhamento em redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://itsnikotina.github.io/NikoDev-Portfolio/">
+  <meta property="og:title" content="Niko | Desenvolvedor Python & Segurança">
+  <meta property="og:description" content="Desenvolvedor autodidata focado em automação e segurança com Python para pequenos negócios.">
+  <meta property="og:image" content="https://itsnikotina.github.io/NikoDev-Portfolio/images/finalphoto.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Niko | Desenvolvedor Python & Segurança">
+  <meta name="twitter:description" content="Desenvolvedor autodidata focado em automação e segurança com Python para pequenos negócios.">
+  <meta name="twitter:image" content="https://itsnikotina.github.io/NikoDev-Portfolio/images/finalphoto.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Dados estruturados (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Niko",
+    "jobTitle": "Desenvolvedor autodidata",
+    "description": "Desenvolvedor autodidata focado em automação e segurança com Python para pequenos negócios.",
+    "email": "nicolasdsgoncalves@gmail.com",
+    "knowsAbout": ["Python", "HTML", "CSS", "JavaScript", "Segurança da Informação", "Automação"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- BARRA DE PROGRESSO DE LEITURA -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- HEADER / NAV -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">&lt;Niko<span class="logo-accent">/</span>dev&gt;</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Início</a></li>
+        <li><a href="#about" class="nav-link">Sobre Mim</a></li>
+        <li><a href="#projects" class="nav-link">Projetos</a></li>
+        <li><a href="#services" class="nav-link">Serviços</a></li>
+        <li><a href="#contact" class="nav-link">Contato</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section class="hero" id="home">
+      <div class="hero-lights" aria-hidden="true">
+        <span class="light light-green"></span>
+        <span class="light light-blue"></span>
+      </div>
+      <canvas class="particles-canvas" id="particles-canvas"></canvas>
+      <div class="container hero-content">
+        <p class="hero-tag">// olá, mundo</p>
+        <h1 class="hero-title">
+          Desenvolvedor <span class="highlight">autodidata</span><br>
+          criando soluções em <span class="highlight">Python</span>
+        </h1>
+        <p class="hero-subtitle">
+          Automação e segurança sob medida para pequenos negócios que precisam de
+          soluções práticas, funcionais e confiáveis.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">Ver Serviços</a>
+          <a href="#contact" class="btn btn-outline">Fale Comigo</a>
+        </div>
+
+        <div class="hero-terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+            <span class="terminal-title">whoami.py</span>
+          </div>
+          <pre class="terminal-body"><code id="typing-code"></code><span class="terminal-cursor" id="terminal-cursor"></span></pre>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section class="about" id="about">
+      <div class="container">
+        <p class="section-tag">01 // sobre mim</p>
+        <h2 class="section-title">Quem faz o código rodar</h2>
+
+        <div class="about-grid">
+          <div class="about-main">
+            <div class="about-photo">
+              <img src="images/finalphoto.jpg" alt="Foto de Niko, desenvolvedor autodidata" width="220" height="220" loading="lazy">
+              <span class="status-badge"><span class="status-dot"></span>Disponível para projetos</span>
+            </div>
+
+            <div class="about-text">
+              <p>
+                Sou um desenvolvedor <strong>autodidata</strong>, apaixonado por resolver problemas reais
+                com tecnologia. Ao longo da minha jornada, aprendi que a melhor solução não é sempre
+                a mais complexa — é a que <strong>funciona</strong>, é <strong>segura</strong> e entrega
+                valor de verdade para quem precisa.
+              </p>
+              <p>
+                Domino <span class="lang lang-html">HTML</span>, <span class="lang lang-css">CSS</span> e
+                <span class="lang lang-js">JavaScript</span> para construir interfaces modernas e funcionais,
+                além de trabalhar com <span class="lang lang-python">Python</span> como minha principal
+                ferramenta para automação e segurança.
+              </p>
+              <p>
+                Meu foco está em ajudar <strong>pequenos negócios</strong> a automatizar tarefas repetitivas
+                e proteger seus dados e sistemas contra ameaças digitais, usando
+                <span class="lang lang-python">Python</span> como principal ferramenta de trabalho.
+              </p>
+            </div>
+          </div>
+
+          <div class="skills-box">
+            <h3 class="skills-title">Habilidades</h3>
+            <ul class="skills-list">
+              <li class="skill-item">
+                <span class="skill-name">
+                  <span class="lang lang-python">Python</span>
+                </span>
+                <div class="skill-bar"><div class="skill-fill" style="--level: 95%"></div></div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">
+                  <span class="lang lang-html">HTML</span> /
+                  <span class="lang lang-css">CSS</span> /
+                  <span class="lang lang-js">JavaScript</span>
+                </span>
+                <div class="skill-bar"><div class="skill-fill" style="--level: 85%"></div></div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Automação de Processos</span>
+                <div class="skill-bar"><div class="skill-fill" style="--level: 90%"></div></div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Segurança da Informação</span>
+                <div class="skill-bar"><div class="skill-fill" style="--level: 85%"></div></div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Scripts & Ferramentas CLI</span>
+                <div class="skill-bar"><div class="skill-fill" style="--level: 88%"></div></div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Análise de Vulnerabilidades</span>
+                <div class="skill-bar"><div class="skill-fill" style="--level: 80%"></div></div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Bancos de Dados (SQL)</span>
+                <div class="skill-bar"><div class="skill-fill" style="--level: 75%"></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <div class="info-card">
+            <span class="info-icon">⚙️</span>
+            <h4>Prático</h4>
+            <p>Soluções diretas ao ponto, sem complexidade desnecessária.</p>
+          </div>
+          <div class="info-card">
+            <span class="info-icon">🔒</span>
+            <h4>Seguro</h4>
+            <p>Segurança integrada em cada linha de código que escrevo.</p>
+          </div>
+          <div class="info-card">
+            <span class="info-icon">🚀</span>
+            <h4>Funcional</h4>
+            <p>Foco em resultados que realmente fazem diferença no seu negócio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <p class="section-tag">02 // projetos</p>
+        <h2 class="section-title">Exemplos do que posso construir</h2>
+        <p class="section-subtitle">
+          Alguns tipos de solução que costumo entregar para pequenos negócios —
+          cada projeto real é adaptado à necessidade específica do cliente.
+        </p>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-icon">🤖</span>
+            <h3 class="project-title">Automação de Backup e Rotinas</h3>
+            <p class="project-desc">
+              Scripts que rodam sozinhos para fazer backup de arquivos e bancos de dados,
+              eliminando tarefas manuais repetitivas e o risco de esquecimento.
+            </p>
+            <div class="project-tags">
+              <span class="lang lang-python">Python</span>
+              <span class="tag">Automação</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-icon">🛡️</span>
+            <h3 class="project-title">Hardening de Servidor Web</h3>
+            <p class="project-desc">
+              Revisão e reforço das configurações de um servidor, fechando portas
+              desnecessárias e corrigindo brechas comuns de segurança.
+            </p>
+            <div class="project-tags">
+              <span class="lang lang-python">Python</span>
+              <span class="tag">Segurança</span>
+            </div>
+            <p class="project-link-note">Veja o script real usado nessa demo logo abaixo ↓</p>
+          </div>
+
+          <div class="project-card">
+            <span class="project-icon">📊</span>
+            <h3 class="project-title">Painel de Monitoramento</h3>
+            <p class="project-desc">
+              Interface simples para acompanhar métricas do negócio em tempo real,
+              com alertas automáticos quando algo sai do esperado.
+            </p>
+            <div class="project-tags">
+              <span class="lang lang-html">HTML</span>
+              <span class="lang lang-css">CSS</span>
+              <span class="lang lang-js">JavaScript</span>
+              <span class="lang lang-python">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEMO AO VIVO -->
+        <div class="live-demo">
+          <div class="live-demo-header">
+            <span class="live-demo-badge">🟢 Demo ao vivo</span>
+            <h3 class="live-demo-title">Verificador de Força de Senha</h3>
+            <p class="live-demo-desc">
+              Versão no navegador da mesma lógica do meu
+              <span class="lang lang-python">Python</span> <code>security_scanner.py</code>
+              (disponível em <code>/security-scanner</code> neste projeto). Tudo roda
+              100% no seu navegador — nenhuma senha é enviada ou armazenada em lugar nenhum.
+            </p>
+          </div>
+
+          <div class="live-demo-body">
+            <div class="form-group">
+              <label for="password-demo">Digite uma senha para testar</label>
+              <div class="password-input-wrapper">
+                <input type="password" id="password-demo" placeholder="Ex: Senha123!" autocomplete="off">
+                <button type="button" class="toggle-password" id="toggle-password" aria-label="Mostrar senha">👁️</button>
+              </div>
+            </div>
+
+            <div class="strength-meter">
+              <div class="strength-fill" id="strength-fill"></div>
+            </div>
+            <p class="strength-label" id="strength-label">Digite uma senha acima para começar</p>
+
+            <ul class="strength-checklist" id="strength-checklist">
+              <li data-check="length">Pelo menos 12 caracteres</li>
+              <li data-check="lower">Contém letras minúsculas</li>
+              <li data-check="upper">Contém letras maiúsculas</li>
+              <li data-check="digit">Contém números</li>
+              <li data-check="symbol">Contém símbolos</li>
+              <li data-check="common">Não é uma senha comum</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="services" id="services">
+      <div class="container">
+        <p class="section-tag">03 // serviços</p>
+        <h2 class="section-title">O que posso fazer pelo seu negócio</h2>
+        <p class="section-subtitle">
+          Serviços pontuais para quem precisa de algo novo, e planos de assinatura mensal
+          para manter tudo funcionando e protegido sem dor de cabeça.
+        </p>
+
+        <div class="services-group">
+          <h3 class="services-group-title">Serviços sob demanda</h3>
+
+          <div class="ondemand-grid">
+            <!-- Auditoria -->
+            <div class="service-card featured">
+              <div class="service-badge">Avaliação Completa</div>
+              <h3 class="service-title">Auditoria de Segurança</h3>
+              <p class="service-desc">
+                Uma análise completa da segurança digital do seu negócio, identificando
+                vulnerabilidades antes que se tornem problemas reais.
+              </p>
+              <ul class="service-list">
+                <li>Verificação de vulnerabilidades em sistemas e sites</li>
+                <li>Análise de configurações de rede e servidores</li>
+                <li>Revisão de políticas de senhas e acessos</li>
+                <li>Relatório detalhado com plano de ação</li>
+                <li>Recomendações práticas e priorizadas</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-block">Solicitar Auditoria</a>
+            </div>
+
+            <!-- Criação de site -->
+            <div class="service-card featured">
+              <div class="service-badge">Site Completo</div>
+              <h3 class="service-title">Criação de Site do Zero</h3>
+              <p class="service-desc">
+                Desenvolvimento completo de um site profissional para o seu negócio,
+                do design à publicação, pronto para atrair clientes.
+              </p>
+              <ul class="service-list">
+                <li>Design moderno e responsivo (celular, tablet e desktop)</li>
+                <li>Desenvolvimento em <span class="lang lang-html">HTML</span>, <span class="lang lang-css">CSS</span> e <span class="lang lang-js">JavaScript</span></li>
+                <li>Otimização básica para mecanismos de busca (SEO)</li>
+                <li>Publicação, domínio e configuração inicial</li>
+                <li>Orientação rápida para você atualizar conteúdos simples</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-block">Solicitar Orçamento</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-group">
+          <h3 class="services-group-title">Planos de assinatura mensal</h3>
+
+          <div class="plans-grid">
+            <div class="service-card">
+              <h3 class="service-title small">Plano Essencial</h3>
+              <p class="service-price"><span>R$</span>149<span>/mês</span></p>
+              <ul class="service-list">
+                <li>Monitoramento básico de segurança</li>
+                <li>Backups automatizados mensais</li>
+                <li>Suporte via e-mail</li>
+                <li>1 relatório mensal de status</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-block">Assinar Plano</a>
+            </div>
+
+            <div class="service-card highlighted">
+              <div class="service-badge">Mais Popular</div>
+              <h3 class="service-title small">Plano Profissional</h3>
+              <p class="service-price"><span>R$</span>349<span>/mês</span></p>
+              <ul class="service-list">
+                <li>Monitoramento contínuo de segurança</li>
+                <li>Automação de tarefas e processos</li>
+                <li>Correção de vulnerabilidades críticas</li>
+                <li>Suporte prioritário via WhatsApp</li>
+                <li>Relatórios quinzenais detalhados</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-block">Assinar Plano</a>
+            </div>
+
+            <div class="service-card">
+              <h3 class="service-title small">Hospedagem &amp; Manutenção</h3>
+              <p class="service-price"><span>R$</span>99<span>/mês</span></p>
+              <ul class="service-list">
+                <li>Hospedagem e domínio inclusos</li>
+                <li>Backups automáticos do site</li>
+                <li>Pequenas atualizações de conteúdo por mês</li>
+                <li>Monitoramento para o site nunca sair do ar</li>
+                <li>Suporte via e-mail</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-block">Assinar Plano</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <p class="section-tag">04 // contato</p>
+        <h2 class="section-title">Vamos conversar?</h2>
+        <p class="section-subtitle">
+          Conte um pouco sobre o seu negócio e como posso ajudar. Respondo o mais rápido possível.
+        </p>
+
+        <div class="contact-grid">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="80" required>
+              <span class="form-error" id="error-name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="voce@email.com" maxlength="100" required>
+              <span class="form-error" id="error-email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" placeholder="Como posso te ajudar?" maxlength="1000" required></textarea>
+              <span class="form-error" id="error-message"></span>
+            </div>
+
+            <div class="form-group form-honeypot" aria-hidden="true">
+              <label for="website">Site</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div class="contact-item-text">
+                <h4>E-mail</h4>
+                <p>nicolasdsgoncalves@gmail.com</p>
+              </div>
+              <button class="copy-btn" id="copy-email" type="button" data-copy="nicolasdsgoncalves@gmail.com" aria-label="Copiar e-mail">
+                <span class="copy-icon">⧉</span>
+              </button>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">💬</span>
+              <div class="contact-item-text">
+                <h4>WhatsApp</h4>
+                <p>(11) 93743-9098</p>
+              </div>
+              <a href="https://wa.me/5511937439098" class="copy-btn" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+                <span class="copy-icon">↗</span>
+              </a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div class="contact-item-text">
+                <h4>Atendimento</h4>
+                <p>Remoto, para todo o Brasil</p>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a href="https://github.com/itsnikotina" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+            </div>
+            <div class="copy-toast" id="copy-toast">E-mail copiado!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Niko. Todos os direitos reservados.</p>
+      <p class="footer-made">Feito com <span class="heart">♥</span> e muito Python.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

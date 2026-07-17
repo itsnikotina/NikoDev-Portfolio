@@ -1,0 +1,7 @@
+# Arquivos de sistema/editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Pastas de dependências (caso adicione build tools no futuro)
+node_modules/

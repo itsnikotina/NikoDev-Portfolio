@@ -1,0 +1,5 @@
+# Site hospedado no GitHub Pages
+User-agent: *
+Allow: /
+
+Sitemap: https://itsnikotina.github.io/NikoDev-Portfolio/sitemap.xml
