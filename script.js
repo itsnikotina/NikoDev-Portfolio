@@ -38,7 +38,8 @@ function initParticles() {
   if (!canvas || !heroSection) return;
 
   const ctx = canvas.getContext('2d');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let prefersReducedMotion = motionQuery.matches;
   const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
 
   const AREA_PER_PARTICLE = 9000; // menor = mais partículas
@@ -88,15 +89,17 @@ function initParticles() {
     }
   }
 
-  function drawFrame() {
+  function drawFrame(updatePhysics = true) {
     ctx.clearRect(0, 0, width, height);
 
     particles.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
+      if (updatePhysics) {
+        p.x += p.vx;
+        p.y += p.vy;
 
-      if (p.x <= 0 || p.x >= width) p.vx *= -1;
-      if (p.y <= 0 || p.y >= height) p.vy *= -1;
+        if (p.x <= 0 || p.x >= width) p.vx *= -1;
+        if (p.y <= 0 || p.y >= height) p.vy *= -1;
+      }
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -152,11 +155,22 @@ function initParticles() {
     const rect = heroSection.getBoundingClientRect();
     mouse.x = event.clientX - rect.left;
     mouse.y = event.clientY - rect.top;
+
+    // com "reduzir movimento" ativado a animação contínua fica pausada,
+    // mas o efeito interativo do mouse (iniciado pelo usuário) continua
+    // funcionando através de um redesenho pontual, sem mover as partículas
+    if (prefersReducedMotion) {
+      drawFrame(false);
+    }
   });
 
   heroSection.addEventListener('mouseleave', () => {
     mouse.x = null;
     mouse.y = null;
+
+    if (prefersReducedMotion) {
+      drawFrame(false);
+    }
   });
 
   window.addEventListener('resize', resize);
@@ -164,6 +178,16 @@ function initParticles() {
   // acompanha mudanças de altura do hero (ex: terminal expandindo ao digitar)
   const resizeObserver = new ResizeObserver(() => resize());
   resizeObserver.observe(heroSection);
+
+  // reage em tempo real se o usuário ligar/desligar "reduzir movimento" no
+  // sistema, sem precisar recarregar a página
+  motionQuery.addEventListener('change', (event) => {
+    prefersReducedMotion = event.matches;
+
+    if (!prefersReducedMotion && !document.hidden) {
+      drawFrame();
+    }
+  });
 
   // pausa a animação quando a aba fica oculta e retoma ao voltar (economia de CPU/bateria)
   document.addEventListener('visibilitychange', () => {
