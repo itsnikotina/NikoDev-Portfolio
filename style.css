@@ -968,7 +968,7 @@ section {
 .service-badge {
   position: absolute;
   top: -14px;
-  left: 32px;
+  right: 32px;
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: #04150d;
   font-size: 0.85rem;
