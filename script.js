@@ -295,7 +295,7 @@ const formStatus = $('#form-status');
 // do Discord em segredo (nunca fica visível no código do site/repositório) e
 // repassa a mensagem por trás dos panos. Veja cloudflare-worker.js para o
 // código do proxy e o passo a passo de deploy.
-const CONTACT_ENDPOINT = 'https://SEU-WORKER.SEU-USUARIO.workers.dev';
+const CONTACT_ENDPOINT = 'https://niko-contact-proxy.pik4chug4m3rbr.workers.dev';
 
 // Limites defensivos (independente do maxlength do HTML) para nunca estourar
 // os limites da API do Discord nem permitir payloads gigantes
