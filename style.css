@@ -944,15 +944,105 @@ section {
 
 .service-badge {
   position: absolute;
-  top: -12px;
+  top: -14px;
   left: 32px;
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: #04150d;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 20px;
   letter-spacing: 0.3px;
+}
+
+.service-badge.promo {
+  position: absolute;
+  background: none;
+  padding: 0;
+  overflow: visible;
+}
+
+/* Propriedade animável: gira só o ângulo do degradê, nunca o elemento em si */
+@property --spin-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* Camada de trás: anel com cor girando (elemento fica parado, só a cor se move) */
+.promo-spin {
+  position: absolute;
+  inset: -5px;
+  z-index: 0;
+  border-radius: 20px;
+  --spin-angle: 0deg;
+  background: conic-gradient(
+    from var(--spin-angle),
+    var(--color-lang-python),
+    #fffbe8,
+    #ffe08a,
+    var(--color-lang-python)
+  );
+  animation: promoSpin 2.5s linear infinite;
+}
+
+/* Camada da frente: pílula sólida com o texto, sempre legível e parada */
+.promo-label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-lang-python), #ffe08a);
+  color: #1a1204;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  animation: promoGlow 2s ease-in-out infinite;
+}
+
+/* Brilho estilo item encantado (Minecraft): uma faixa de luz que varre a pílula */
+.promo-label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent,
+    rgba(255, 255, 255, 0.75),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: promoShine 3s ease-in-out infinite;
+}
+
+@keyframes promoSpin {
+  to { --spin-angle: 360deg; }
+}
+
+@keyframes promoGlow {
+  0%, 100% { box-shadow: 0 0 8px 0 rgba(255, 194, 71, 0.5); }
+  50% { box-shadow: 0 0 18px 4px rgba(255, 194, 71, 0.75); }
+}
+
+@keyframes promoShine {
+  0% { left: -60%; }
+  35% { left: 130%; }
+  100% { left: 130%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-spin,
+  .promo-label,
+  .promo-label::after {
+    animation: none;
+  }
 }
 
 .service-title {
@@ -970,6 +1060,32 @@ section {
   font-size: 0.92rem;
 }
 
+.service-price-tag {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.service-price-tag strong {
+  color: var(--color-primary-light);
+  font-size: 1.5rem;
+}
+
+.service-price-tag .price-old {
+  text-decoration: line-through;
+  color: var(--color-text-dim);
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin-right: 12px;
+}
+
+.service-price-tag .price-new {
+  color: var(--color-lang-python);
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
 .service-price {
   font-size: 2rem;
   font-weight: 700;
@@ -981,6 +1097,35 @@ section {
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-text-muted);
+}
+
+.service-price .price-old {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-text-dim);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.service-price .price-old span {
+  color: var(--color-text-dim);
+  font-size: 0.95rem;
+}
+
+.service-price .price-new {
+  display: block;
+  color: var(--color-lang-python);
+  font-size: 2.3rem;
+}
+
+.promo-note {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-lang-python);
+  margin-top: -6px;
+  margin-bottom: 18px;
+  font-style: italic;
 }
 
 .service-list {
