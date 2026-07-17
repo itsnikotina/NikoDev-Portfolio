@@ -676,6 +676,14 @@ section {
   font-size: 1.8rem;
   display: inline-block;
   margin-bottom: 14px;
+  color: var(--color-primary);
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
 }
 
 .info-card h4 {
@@ -718,6 +726,7 @@ section {
   font-size: 1.8rem;
   display: inline-block;
   margin-bottom: 16px;
+  color: var(--color-primary);
 }
 
 .project-title {
@@ -773,7 +782,9 @@ section {
 }
 
 .live-demo-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 600;
@@ -783,6 +794,15 @@ section {
   padding: 4px 12px;
   border-radius: 20px;
   margin-bottom: 14px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(33, 224, 138, 0.25);
+  flex-shrink: 0;
 }
 
 .live-demo-title {
@@ -825,6 +845,9 @@ section {
   font-size: 1.05rem;
   padding: 6px;
   line-height: 1;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
 }
 
 .strength-meter {
@@ -990,8 +1013,9 @@ section {
 .promo-label {
   position: relative;
   z-index: 1;
-  display: inline-block;
-  vertical-align: top;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-lang-python), #ffe08a);
   color: #1a1204;
@@ -1265,6 +1289,9 @@ section {
 
 .contact-icon {
   font-size: 1.4rem;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
 }
 
 .contact-item-text {
