@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* =========================================
    RESET & BASE
 ========================================= */
@@ -1156,6 +1157,99 @@ section {
   font-style: italic;
 }
 
+.combo-panel {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 24px;
+  padding: 30px 34px;
+  background: linear-gradient(135deg, var(--color-surface), var(--color-bg-alt));
+  border: 1px solid var(--color-primary-dark);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(33, 224, 138, 0.08);
+}
+
+.combo-panel-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(33, 224, 138, 0.12);
+  color: var(--color-primary);
+}
+
+.combo-panel-icon .icon {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.combo-panel-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.combo-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.combo-panel-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.combo-panel-title {
+  font-size: 1.2rem;
+}
+
+.combo-panel-desc {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.combo-panel-price {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding-left: 28px;
+  border-left: 1px solid var(--color-border);
+  min-width: 240px;
+}
+
+.combo-panel-price-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.combo-panel-price-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-light);
+}
+
+.combo-panel-price-note {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  margin-bottom: 8px;
+}
+
+.combo-panel-btn {
+  width: 100%;
+}
+
 .service-list {
   margin-bottom: 24px;
   flex-grow: 1;
@@ -1481,6 +1575,21 @@ section {
 
   .about-cards {
     grid-template-columns: 1fr;
+  }
+
+  .combo-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .combo-panel-price {
+    align-items: flex-start;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+    width: 100%;
   }
 }
 
