@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://itsnikotina.github.io/NikoDev-Portfolio/sitemap.xml
+Sitemap: https://itsnikotina.github.io/NikoDev/sitemap.xml
